@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const db_link = 'mongodb+srv://admin:ppchQ9vjxtZJrldK@cluster0.1updrw4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+
 const emailValidator = require('email-validator');
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');

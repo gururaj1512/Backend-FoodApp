@@ -40,9 +40,12 @@ module.exports.login = async function login(req, res) {
                     let uid = user['_id']
                     let token = jwt.sign({payload:uid}, JWT_KEY)
                     res.cookie('login', token)
+                    let success = true
                     return res.json({
                         message: "User has been logged in",
-                        userDetails: data
+                        userDetails: data,
+                        success: success,
+                        authtoken: token
                     })
                 } else {
                     return res.json({

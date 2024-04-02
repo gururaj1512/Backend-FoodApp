@@ -2,8 +2,9 @@ const cookieParser = require('cookie-parser')
 
 const express = require('express');
 const app = express();
+var cors = require('cors')
 
-app.use(express.json())
+app.use(express.json(), cors())
 app.listen(5000)
 app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())

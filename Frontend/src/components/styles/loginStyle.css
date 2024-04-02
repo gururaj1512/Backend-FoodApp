@@ -1,0 +1,42 @@
+#main {
+    display: flex;
+}
+
+#form-body {
+    width: 70%;
+    min-width: 400px;
+    display: flex;
+}
+
+#form {
+    width: 35%;
+    margin: auto;
+    border: 1px solid #D0D0D0;
+    align-self: center;
+    justify-content: center;
+    min-width: 400px;
+}
+
+#form > h3 {
+    padding: 20px;
+}
+
+form {
+    margin: 20px;
+}
+
+#email {
+    width: 90%;
+    margin: auto;
+}
+
+#password {
+    width: 90%;
+    margin: auto;
+}
+
+#foodImg {
+    background-color: rgb(178, 206, 134);
+    width: 30%;
+    height: 100vh;
+}
