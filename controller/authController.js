@@ -14,9 +14,10 @@ module.exports.signup = async function signup(req, res) {
         // console.log('backend', dataObj);
         sendMail("signup", user)
         if (user) {
+            let success = true
             return res.json({
-                message: "user signed in",
-                data: dataObj
+                data: dataObj,
+                success: success
             })
         } else {
             res.json({
@@ -42,7 +43,6 @@ module.exports.login = async function login(req, res) {
                     res.cookie('login', token)
                     let success = true
                     return res.json({
-                        message: "User has been logged in",
                         userDetails: data,
                         success: success,
                         authtoken: token

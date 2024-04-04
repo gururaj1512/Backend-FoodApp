@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './styles/loginStyle.css';
 import { useNavigate } from 'react-router-dom'
+import Image from '../images/image.jpg';
 
 function Login() {
-  
+
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   let navigate = useNavigate()
 
@@ -19,36 +20,35 @@ function Login() {
     const json = await response.json()
     if (json.success) {
       localStorage.setItem('token', json.authtoken)
-      navigate("/");
+      console.log("successful")
+      navigate("/")
     } else {
       console.log("unsuccessful")
     }
   }
 
-  const onChange = (e)=>{
-    setCredentials({...credentials, [e.target.name]: e.target.value})
+  const onChange = (e) => {
+    setCredentials({ ...credentials, [e.target.name]: e.target.value })
   }
 
   return (
     <div id='main'>
-      <div id='form-body'>
-        <div id="form">
-          <h3>Welcome back</h3>
-          <form onSubmit={loginSubmit}>
-            <div className="mb-3 inputs">
-              <label htmlFor="email">EMAIL</label>
-              <input type="email" className="form-control" value={credentials.email} onChange={onChange} id="email" name='email' />
-            </div>
-            <div className="mb-3 inputs">
-              <label htmlFor="password" className="form-label">Password</label>
-              <input type="password" className="form-control" value={credentials.password} onChange={onChange} id="password" name='password' />
-            </div>
-            <p><a href="" style={{textDecoration: 'none'}}>Forgot password?</a></p>
-            <button type="submit" className="btn btn-primary my-3">Login</button>
-          </form>
-        </div>
+      <div id="form">
+        <h3>Food-App</h3>
+        <form onSubmit={loginSubmit}>
+          <div className="inputs">
+            <input type="email" className="form-control" value={credentials.email} onChange={onChange} id="email" name='email' placeholder='EMAIL' />
+          </div>
+          <div className="inputs">
+            <input type="password" className="form-control" value={credentials.password} onChange={onChange} id="password" name='password' placeholder='PASSWORD' />
+          </div>
+          <button type="submit" className="button">LOGIN</button>
+          <p><a href="/" style={{ textDecoration: 'none' }}>Forgot password?</a></p>
+        </form>
       </div>
-      <div id='foodImg'></div>
+      <div id='image'>
+        <img src={Image} alt=""/>
+      </div>
     </div>
   )
 }

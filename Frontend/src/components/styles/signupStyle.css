@@ -1,0 +1,113 @@
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#form {
+    min-height: 300px;
+    min-width: 300px;
+    width: 30%;
+    height: max-content;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+#form>h3 {
+    font-family: 'raleway';
+    font-weight: 500;
+    margin: 30px 0 20px 0;
+    font-size: 25px;
+    color: rgb(25, 4, 74);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input {
+    height: 30px;
+    width: 60%;
+    margin: 10px;
+    border: 0;
+    border-bottom: 1.5px solid #F09819;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    color: rgb(60, 60, 60);
+}
+
+input:focus {
+    border-color: #F09819;
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+
+    -webkit-box-shadow: inset 1px 1px 0 #ffffff, 1px 0 0 #ffffff;
+    -moz-box-shadow: inset 1px 1px 0 #ffffff, 1px 0 0 #ffffff;
+    box-shadow: inset 1px 1px 0 #ffffff, 1px 0 0 #ffffff;
+}
+
+::placeholder {
+    color: rgb(164, 164, 164);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.button {
+    width: 50%;
+    margin: 20px auto 0 auto;
+    padding: 15px 30px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+form>p {
+    font-size: 12px;
+    margin-bottom: 40px;
+}
+
+#image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  img{
+    height: 100%;
+    width: 100%;
+  }
