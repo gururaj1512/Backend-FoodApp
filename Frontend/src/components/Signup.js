@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import './styles/signupStyle.css'
+import './styles/SignupStyle.css'
 import Image from '../images/image.jpg'
 
 function Signup() {

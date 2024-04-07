@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './styles/loginStyle.css';
+import './styles/LoginStyle.css';
 import { useNavigate } from 'react-router-dom'
 import Image from '../images/image.jpg';
 

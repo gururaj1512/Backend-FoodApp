@@ -9,6 +9,19 @@ app.listen(5000)
 app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
 
+require('dotenv').config()
+let key = process.env.MONGO_KEY
+
+const mongoose = require('mongoose');
+const db_link = `mongodb+srv://admin:${key}@cluster0.1updrw4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+mongoose.connect(db_link)
+.then(function(db){
+    console.log('db connected');
+})
+.catch(function(err){
+    console.log(err);
+})
+
 
 const userRouter = require('./Routers/userRouter')
 app.use('/user', userRouter)
