@@ -37,16 +37,16 @@ function Signup() {
                 <h3>Food-App</h3>
                 <form onSubmit={signupSubmit}>
                     <div className="mb-3 inputs">
-                        <input type="text" className="form-control" value={credentials.name} onChange={onChange} id="name" name='name' placeholder='NAME' />
+                        <input type="text" value={credentials.name} onChange={onChange} id="name" name='name' placeholder='NAME' />
                     </div>
                     <div className="mb-3 inputs">
-                        <input type="email" className="form-control" value={credentials.email} onChange={onChange} id="email" name='email' placeholder='EMAIL' />
+                        <input type="email" value={credentials.email} onChange={onChange} id="email" name='email' placeholder='EMAIL' />
                     </div>
                     <div className="mb-3 inputs">
-                        <input type="password" className="form-control" value={credentials.password} onChange={onChange} id="password" name='password' placeholder='PASSWORD' />
+                        <input type="password" value={credentials.password} onChange={onChange} id="password" name='password' placeholder='PASSWORD' />
                     </div>
                     <div className="mb-3 inputs">
-                        <input type="password" className="form-control" value={credentials.confPassword} onChange={onChange} id="confPassword" name='confPassword' placeholder='CONFIRM PASSWORD' />
+                        <input type="password" value={credentials.confPassword} onChange={onChange} id="confPassword" name='confPassword' placeholder='CONFIRM PASSWORD' />
                     </div>
                     <button type="submit" className="button">Login</button>
                     <p>Already have an account? <a href="/login" style={{ textDecoration: 'none' }}>login</a></p>

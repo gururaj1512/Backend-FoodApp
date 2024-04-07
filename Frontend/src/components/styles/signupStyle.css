@@ -33,7 +33,7 @@ form {
 input {
     height: 30px;
     width: 60%;
-    margin: 10px;
+    margin: 0px;
     border: 0;
     border-bottom: 1.5px solid #F09819;
     background-color: rgb(255, 255, 255);

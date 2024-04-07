@@ -1,13 +1,4 @@
 const mongoose = require('mongoose');
-const db_link = 'mongodb+srv://admin:ppchQ9vjxtZJrldK@cluster0.1updrw4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
-
-mongoose.connect(db_link)
-.then(function(db){
-    console.log('plan db connected');
-})
-.catch(function(err){
-    console.log(err);
-})
 
 
 const planSchema = new mongoose.Schema({

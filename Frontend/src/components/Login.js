@@ -36,13 +36,13 @@ function Login() {
       <div id="form">
         <h3>Food-App</h3>
         <form onSubmit={loginSubmit}>
-          <div className="inputs">
-            <input type="email" className="form-control" value={credentials.email} onChange={onChange} id="email" name='email' placeholder='EMAIL' />
+          <div className="mb-3 inputs">
+            <input type="email" value={credentials.email} onChange={onChange} id="email" name='email' placeholder='EMAIL' />
           </div>
           <div className="inputs">
-            <input type="password" className="form-control" value={credentials.password} onChange={onChange} id="password" name='password' placeholder='PASSWORD' />
+            <input type="password" value={credentials.password} onChange={onChange} id="password" name='password' placeholder='PASSWORD' />
           </div>
-          <button type="submit" className="button">LOGIN</button>
+          <button type="submit" id="button">LOGIN</button>
           <p><a href="/" style={{ textDecoration: 'none' }}>Forgot password?</a></p>
         </form>
       </div>

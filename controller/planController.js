@@ -4,10 +4,8 @@ module.exports.getAllPlans = async function getAllPlans(req, res) {
     try {  
         let plans = await planModel.find()
         if (plans) {
-            return res.json({
-                message: 'all plans retreived',
-                data: plans
-            })
+            console.log(plans);
+            return res.json(plans)
         } else {
             return res.json({
                 message: 'plans not found',
@@ -116,10 +114,7 @@ module.exports.deletePlan = async function deletePlan(req, res) {
 module.exports.topThreePlans = async function topThreePlans(req, res) {
     try {
         let topPlans = await planModel.find().sort({avgRating: -1}).limit(3)
-        return res.json({
-            message: 'Top 3 plans displayed',
-            data: topPlans
-        })
+        return res.json(topPlans)
     } catch (err) {
         res.status(500).json({
             message: err.message
