@@ -4,7 +4,6 @@ module.exports.getAllPlans = async function getAllPlans(req, res) {
     try {  
         let plans = await planModel.find()
         if (plans) {
-            console.log(plans);
             return res.json(plans)
         } else {
             return res.json({

@@ -6,7 +6,7 @@ const Planitem = (props) => {
   const { plan } = props;
   return (
     <div>
-      <div className="card" style={{width: '17rem', margin: '30px 30px'}}>
+      <div className="card" style={{width: '15rem', margin: '50px 50px'}}>
         <img src={Logo} className="card-img-top" alt="Image" />
         <div className="card-body">
           <h5 className="card-title">{plan.name}</h5>

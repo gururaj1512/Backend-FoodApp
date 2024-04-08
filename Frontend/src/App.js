@@ -6,12 +6,14 @@ import Signup from './components/Signup';
 import Home from './components/Home';
 import PlanState from './context/plans/PlanState';
 import Plans from './components/Plans';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div>
       <PlanState>
         <Router>
+          <Navbar/>
           <div>
             <Routes>
               <Route exact path="/" element={<Home />}></Route>
