@@ -7,6 +7,7 @@ import Home from './components/Home';
 import PlanState from './context/plans/PlanState';
 import Plans from './components/Plans';
 import Navbar from './components/Navbar';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route exact path="/plans" element={<Plans />}></Route>
               <Route exact path="/login" element={<Login />}></Route>
               <Route exact path="/signup" element={<Signup />}></Route>
+              <Route exact path="/profile" element={<Profile />}></Route>
             </Routes>
           </div>
         </Router>

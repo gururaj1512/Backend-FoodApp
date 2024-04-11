@@ -9,11 +9,7 @@ const Home = (props) => {
   let navigate = useNavigate()
   const { top3Plans, getTopThreePlans } = useContext(planContext);
   useEffect(() => {
-    if (localStorage.getItem('token')) {
-      getTopThreePlans()
-    } else {
-      navigate("/login");
-    }
+    getTopThreePlans()
   }, [])
 
   return (

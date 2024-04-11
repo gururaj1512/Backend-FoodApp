@@ -43,9 +43,9 @@ module.exports.login = async function login(req, res) {
                     res.cookie('login', token)
                     let success = true
                     return res.json({
-                        userDetails: data,
                         success: success,
-                        authtoken: token
+                        authtoken: token,
+                        userID : uid
                     })
                 } else {
                     return res.json({

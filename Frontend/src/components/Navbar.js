@@ -5,10 +5,10 @@ import profilePic from '../images/profilePic.webp'
 
 function Navbar() {
   return (
-    <div style={{fontFamily: 'poppins', fontWeight: '400', width: '100%',opacity: '0.95',  position: 'fixed', zIndex: '10'}}>
+    <div style={{ fontFamily: 'poppins', fontWeight: '400', width: '100%', opacity: '0.95', position: 'fixed', zIndex: '10' }}>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand mx-3" href="#"><img src={Logo} alt="" style={{height: '40px'}} /></a>
+          <a className="navbar-brand mx-3" href="#"><img src={Logo} alt="" style={{ height: '40px' }} /></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -27,15 +27,21 @@ function Navbar() {
                 <ul className="dropdown-menu">
                   <li><a className="dropdown-item" href="#">Action</a></li>
                   <li><a className="dropdown-item" href="#">Another action</a></li>
-                  <li><hr className="dropdown-divider"/></li>
+                  <li><hr className="dropdown-divider" /></li>
                   <li><a className="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
             </ul>
-            <div className="d-flex align-items-center justify-content-evenly" style={{width: '150px'}}>
-              <div>Profile</div>
-              <img src={profilePic} alt="" style={{height: '40px',width: '40px', borderRadius: '50%'}}/>
-            </div>
+            {localStorage.getItem('token') ? 
+              <a href='/profile' style={{textDecoration: 'none'}}>
+                <div className="d-flex align-items-center justify-content-evenly" style={{ width: '150px' }}>
+                  <div>Profile</div>
+                  <img src={profilePic} alt="" style={{ height: '40px', width: '40px', borderRadius: '50%' }} />
+                </div>
+              </a> : <div className="d-flex align-items-center justify-content-evenly" style={{ width: '150px' }}>
+                <div> <a href="/login">Login</a></div>
+              </div>
+            }
           </div>
         </div>
       </nav>

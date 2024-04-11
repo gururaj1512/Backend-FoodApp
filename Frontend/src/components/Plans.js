@@ -10,11 +10,13 @@ const Plans = (props) => {
   }, [])
 
   return (
-    <div className='container' style={{overflowY: 'hidden'}}>
-      <div className='' style={{ display: 'flex', flexDirection: 'row' ,paddingTop: '50px'}}>
-        {allPlans.map((plan) => {
-          return <Planitem key={plan._id} plan={plan} />
-        })}
+    <div>
+      <div className='container' style={{ overflowY: 'hidden' }}>
+        <div className='' style={{ display: 'flex', flexDirection: 'row', paddingTop: '50px' }}>
+          {allPlans.map((plan) => {
+            return <Planitem key={plan._id} plan={plan} />
+          })}
+        </div>
       </div>
     </div>
   )
